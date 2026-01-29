@@ -1,0 +1,26 @@
+aws_region   = "us-east-1"
+project_name = "cloudops-test"
+environment  = "dev"
+
+vpc_cidr             = "10.0.0.0/16"
+storage_subnet_cidrs = ["10.0.0.0/20", "10.0.32.0/20", "10.0.64.0/20"]
+compute_subnet_cidrs = ["10.0.16.0/20", "10.0.48.0/20", "10.0.80.0/20"]
+public_subnet_cidr   = "10.0.96.0/20"
+
+domain_name = "example.com"
+
+aurora_database_name   = "appdb"
+aurora_master_username = "dbadmin"
+aurora_master_password = "ChangeMe123!"
+aurora_instance_class  = "db.t3.medium"
+
+elasticache_node_type  = "cache.t3.micro"
+elasticache_auth_token = "ChangeMe123!Token"
+
+skip_final_snapshot = true
+
+common_tags = {
+  Project   = "CloudOps Technical Test"
+  Owner     = "Team"
+  ManagedBy = "Terraform"
+}
