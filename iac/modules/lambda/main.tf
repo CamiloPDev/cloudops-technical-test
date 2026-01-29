@@ -83,6 +83,7 @@ resource "aws_lambda_function" "main" {
   timeout          = var.timeout
   memory_size      = var.memory_size
   source_code_hash = filebase64sha256(var.filename)
+  architectures    = ["arm64"]
 
   vpc_config {
     subnet_ids         = var.subnet_ids
