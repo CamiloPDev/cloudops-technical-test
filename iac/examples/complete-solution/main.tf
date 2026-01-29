@@ -74,7 +74,7 @@ module "aurora" {
   master_username         = var.aurora_master_username
   master_password         = var.aurora_master_password
   instance_class          = var.aurora_instance_class
-  instance_count          = 1
+  instance_count          = 2
   backup_retention_period = 7
   skip_final_snapshot     = var.skip_final_snapshot
   kms_key_arn             = module.kms.key_arn
